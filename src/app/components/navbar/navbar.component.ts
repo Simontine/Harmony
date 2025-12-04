@@ -45,7 +45,7 @@ logout() {
 
 
 addDevice(){
-  this.router.navigate(['/setting']);
+  this.router.navigate(['/add']);
 }
 
 }

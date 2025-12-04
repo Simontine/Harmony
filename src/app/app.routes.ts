@@ -5,6 +5,8 @@ import { MapComponent } from './components/map/map.component';
 import { PetComponent } from './components/pet/pet.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { UserComponent } from './components/user/user.component';
+import { AddDeviceComponent } from './components/add-device/add-device.component';
+import { QRCodeComponent } from './Add Devices/qr-code/qr-code.component';
 
 export const routes: Routes = [
   {
@@ -24,5 +26,7 @@ export const routes: Routes = [
   },
   {
     path: 'user', component: UserComponent
-  }
+  },
+  { path: 'add', component: AddDeviceComponent},
+  { path: 'qr', component: QRCodeComponent }
 ];
