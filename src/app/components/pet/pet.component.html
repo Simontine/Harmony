@@ -1,0 +1,146 @@
+<!-- <nav class="nav justify-content-center">
+    <a class="nav-link justify-content-start" aria-current="page" href="#">Active</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link justify-content-end" aria-disabled="true">Disabled</a>
+  </nav> -->
+
+<nav class="navbar" style="background-color: rgb(0, 0, 0); height: 7rem; margin-top: 0%; margin-bottom: 2rem;">
+    <div class="container mt-3">
+        <a class="navbar-brand" (click)="goBack()">
+            <img src="https://img.icons8.com/?size=40&id=yiR4rPf7BGje&format=png&color=ffffff" width="30" height="24">
+        </a>
+        <a class="navbar-brand" (click)="goBackAndNavigate()">
+            <img src="https://img.icons8.com/?size=100&id=8GIRvZKh33Aj&format=png&color=ffffff" width="30" height="30" alt="Home Icon">
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- <div class="row">
+      <div class="col">
+        <h2>Welcome to the Pet Component</h2>
+        <p>This is where pet-related content will go.</p>
+      </div>
+    </div> -->
+    <div class="row">
+        <div class="col">
+            <img src="https://img.icons8.com/?size=120&id=117108&format=png&color=000000" alt="">
+        </div>
+        <div class="col">
+            <h2>Pet Component</h2>
+            <p>This is where pet-related content will go.</p>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body">
+            <app-map></app-map>
+        </div>
+        <div class="card-footer">
+            <div class="location-card">
+                <img class="package-icon" src="https://img.icons8.com/?size=30&id=2436&format=png&color=8A6CDD" alt="">
+
+                <div class="location-info">
+                    <h4 class="location-title">Your location</h4>
+                    <p class="location-id">location</p>
+                </div>
+
+                <div class="menu-dots">
+                    <img src="https://img.icons8.com/?size=30&id=LKsFvL102V3q&format=png&color=BCBABF" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col">
+            <div class="card" style="height: 17rem;">
+                <div class="card-body">
+                    <!-- <p>State: {{ state }}</p> -->
+                    <div class="input-group mb-3 mt-4">
+                        <input type="text" class="form-control" [(ngModel)]="value" placeholder="Enter geofence value"
+                            aria-label="Geofence value" aria-describedby="button-addon2" [disabled]="!state">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                            (click)="setGeofence()" [disabled]="!state">
+                            Set geofence
+                        </button>
+                    </div>
+
+
+                    <div class="mb-3" [class.disabled]="!state">
+                        <label class="form-label">Range: {{ value }}m</label>
+                        <input type="range" class="form-range" [min]="0" [max]="100" [(ngModel)]="value">
+                    </div>
+
+                    <div class="header-section">
+                        <div class="user-info">
+                            <div class="greeting-text">
+                                <p class="geo">Geofence: {{geo}}</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 0;">
+
+
+                            <button class="btn" style="padding-right: 1rem;" type="button" (click)="changeState()">
+                                <img [src]="'https://img.icons8.com/?size=40&id=Cqhok5BBe9du&format=png&color=' + color"
+                                    alt="">
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="height: 17rem;">
+                <div class="card-body">
+
+                    <div class="d-flex align-items-center mb-3">
+                      <img src="https://img.icons8.com/?size=30&id=LKsFvL102V3q&format=png&color=BCBABF" alt="Contact Photo" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                      <div>
+                        <h5 class="card-title mb-0">**Dr. Evelyn Reed**</h5>
+                        <h6 class="card-subtitle text-muted">Recent Incoming Call</h6>
+                      </div>
+                    </div>
+                    
+                    <ul class="list-group list-group-flush mb-3">
+                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <small class="text-muted">Phone Number:</small>
+                        <span>**(555) 123-4567**</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <small class="text-muted">Call Time:</small>
+                        <span><i class="bi bi-clock me-1"></i> 02:45 PM</span>
+                      </li>
+                      <!-- <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <small class="text-muted">Call Duration:</small>
+                        <span>**1:32**</span>
+                      </li> -->
+                    </ul>
+                
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button class="btn btn-outline-primary btn-sm" type="button">
+                        <i class="bi bi-person-lines-fill me-1"></i> View Profile
+                      </button>
+                      <button class="btn btn-success btn-sm" type="button">
+                        <i class="bi bi-telephone-fill me-1"></i> Call Back
+                      </button>
+                    </div>
+                
+                  </div>
+                  <!-- <div class="card-footer text-muted text-end">
+                    Logged on: 2025-12-03
+                  </div> -->
+            </div>
+        </div>
+    </div>
+
+
+</div>

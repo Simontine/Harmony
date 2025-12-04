@@ -1,0 +1,249 @@
+/* Base styles for the container */
+.tracking-input-container {
+    display: flex; /* Aligns contents horizontally */
+    align-items: center; /* Centers items vertically */
+    width: 100%;
+    max-width: 500px; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 25px; /* Half the height for perfect pill shape */
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
+    overflow: hidden; /* Important to keep the elements inside the rounded border */
+    padding: 0 5px 0 15px; /* Space on the left for the icon */
+}
+
+/* Style for the main input field */
+.tracking-input {
+    flex-grow: 1; /* Makes the input take up most of the space */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 0 10px;
+    height: 100%;
+    background: transparent; /* Ensures white background comes from the container */
+}
+
+.tracking-input::placeholder {
+    color: #aaa; /* Lighter color for placeholder text */
+}
+
+/* Style for the left icon (Search) */
+.icon-left {
+    color: #aaa;
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+/* Style for the orange action button */
+.action-button {
+    border: none;
+    outline: none;
+    background-color: #ff8c42; /* The distinctive orange color */
+    color: white;
+    width: 40px; /* Size of the circular button */
+    height: 40px; /* Size of the circular button */
+    border-radius: 50%; /* Makes it a perfect circle */
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    margin-right: 3px; /* Small space from the container edge */
+    flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+.action-button:hover {
+    background-color: #e07c3a; /* Slightly darker orange on hover */
+}
+
+.location-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Icon */
+  .location-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    margin-right: 12px;
+    object-fit: cover;
+  }
+  
+  /* Text section */
+  .location-info {
+    flex: 1;
+    padding-left: 1rem;
+  }
+  
+  .location-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+  }
+  
+  .location-id {
+    font-size: 12px;
+    color: #666;
+    margin: 2px 0 0;
+  }
+  
+  /* Menu dots */
+  .menu-dots {
+    font-size: 20px;
+    color: #444;
+    padding-right: 10px;
+    cursor: pointer;
+  }
+
+  .menu-dots:hover {
+    color: #e11717;
+  }
+
+  .action-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    // background-color: #000; /* Pure black background */
+    padding: 20px 20px 30px 20px; /* Padding for mobile screens */
+    color: rgb(194, 21, 21); /* Default text color */
+    max-width: auto; /* Constrain width for demonstration */
+  }
+  
+  .action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70px; /* controls spacing */
+  }
+  
+  .action-icon {
+    width: 60px;
+    height: 60px;
+    background: #f2f2f2;   /* light grey circle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  
+  .action-icon img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .action-item p {
+    font-size: 13px;
+    margin: 0;
+    color: #333;
+  }
+  
+
+  .user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Profile Avatar Styles (Modified) --- */
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%; /* Still makes the container circular */
+    overflow: hidden;   /* Crucial: clips the image to the circular shape */
+    margin-right: 15px;
+    /* Removed background-color: #ccc; as it's no longer needed for placeholder */
+}
+
+.profile-avatar img {
+    width: 100%;       /* Make image fill the avatar container */
+    height: 100%;      /* Make image fill the avatar container */
+    object-fit: cover; /* Ensures the image covers the area without distortion, cropping if necessary */
+    display: block;    /* Removes extra space below the image */
+}
+
+.pet {
+    font-size: 14px;
+    color: #828181;
+    margin: 0 1rem 0 1rem   ;
+    // margin: 0;
+    line-height: 1.2;
+}
+
+.user-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 1rem;
+    line-height: 1.2;
+}
+
+.card
+{
+    background-color: #fff;
+    // border-radius: 12px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    // margin: 20px;
+    padding-top: 2rem;
+    width: 100wh;
+}
+
+.card-header
+{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-left: 1rem;
+    height: 5rem;
+}
+
+
+
+.btn-movie{
+  background-color: #000;
+  color: #f2f2f2;
+  border-radius: 25px;
+  height: 50px;
+  width: 180px;
+}
+
+.card{
+  height: 10rem;
+}
+
+.icon-btn {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+
+.smart-card {
+  background: #5c5c5d;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+// .lamp-icon {
+//   opacity: 0.45;
+// }
+
+.power-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0.45;
+}
+
+// .power-icon {
+//   opacity: 0.7;
+// }

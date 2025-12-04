@@ -1,0 +1,198 @@
+<div class="app-dashboard">
+    <div class="header-section">
+        <div class="user-info">
+            <div class="profile-avatar" data-bs-toggle="offcanvas" href="#offcanvasExample">
+                 <img src="https://i.pravatar.cc/150?img=68" alt="">
+            </div>
+            <div class="greeting-text">
+                <p class="welcome">Welcome</p>
+                <h1 class="user-name">{{username}}</h1>
+            </div>
+        </div>
+
+        
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="dropdown mt-3">
+                <ul class="list-unstyled">
+
+                    <!-- Features -->
+                    <li class="mb-3">
+                      <button class="btn w-100 text-start d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#featuresMenu">
+                        Features
+                        <span class="ms-2">▾</span>
+                      </button>
+                      <div class="collapse" id="featuresMenu">
+                        <ul class="ps-3 mt-2 list-unstyled">
+                          <li>Feature A</li>
+                          <li>Feature B</li>
+                          <li>Feature C</li>
+                        </ul>
+                      </div>
+                    </li>
+                
+                    <!-- Products -->
+                    <li class="mb-3">
+                      <button class="btn w-100 text-start d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#productsMenu">
+                        Products
+                        <span class="ms-2">▾</span>
+                      </button>
+                      <div class="collapse" id="productsMenu">
+                        <ul class="ps-3 mt-2 list-unstyled">
+                          <li>Product 1</li>
+                          <li>Product 2</li>
+                        </ul>
+                      </div>
+                    </li>
+                
+                    <!-- Resources -->
+                    <li class="mb-3">
+                      <button class="btn w-100 text-start d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#resourcesMenu">
+                        Resources
+                        <span class="ms-2">▾</span>
+                      </button>
+                      <div class="collapse" id="resourcesMenu">
+                        <ul class="ps-3 mt-2 list-unstyled">
+                          <li>Tutorials</li>
+                          <li>Guides</li>
+                          <li>Community</li>
+                        </ul>
+                      </div>
+                    </li>
+                
+                    <!-- Blog -->
+                    <li class="mb-3">
+                      <button class="btn w-100 text-start d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#blogMenu">
+                        Blog
+                        <span class="ms-2">▾</span>
+                      </button>
+                      <div class="collapse" id="blogMenu">
+                        <ul class="ps-3 mt-2 list-unstyled">
+                          <li>Latest Posts</li>
+                          <li>Articles</li>
+                        </ul>
+                      </div>
+                    </li>
+                
+                    <!-- Pricing -->
+                    <li class="mb-3">
+                      <a class="btn w-100 text-start">Pricing</a>
+                    </li>
+                
+                    <!-- Docs -->
+                    <li>
+                      <a class="btn w-100 text-start">Docs</a>
+                    </li>
+                
+                  </ul>
+
+                  <hr class="my-4">
+
+                  <!-- Bottom Section: 2 Columns -->
+                <div class="row text-start">
+                    <div class="col-6">
+                    <p>About us</p>
+                    <p>Press</p>
+                    <p>Careers</p>
+                    <p>Legal</p>
+                    </div>
+                    <div class="col-6">
+                    <p>Support</p>
+                    <p>Contact</p>
+                    <p>Sitemap</p>
+                    <p>Cookie settings</p>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-4">
+                    <button class="btn btn-dark w-100 mb-2">Sign up</button>
+                    <button class="btn btn-outline-dark w-100">Log in</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+        <div class="modal fade" #logoutModal tabindex="-1">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Confirm Logout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-dark" (click)="logout()">Logout</button>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+        
+        <div style="display: flex; align-items: center; gap: 0;">
+            <button class="notification-button">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">{{notifications}}</span>
+            </button>
+        
+            <div style="padding-left: 1rem;" type="button"  data-bs-toggle="modal" (click)="addDevice()">
+                <img src="https://img.icons8.com/?size=40&id=24717&format=png&color=FFFFFF" alt="">
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="max-width: 10rem; margin-left: auto;">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> -->
+                    <div class="modal-body">
+                     <ul>
+                        <li>    1</li>
+                        <li>    2</li>
+                     </ul>
+                    </div>
+                    <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="tracking-input-container">
+        <span class="icon-left">
+            <i class="fas fa-search"></i>
+        </span>
+        <input type="text" placeholder="Enter your tracking number..." class="tracking-input">
+        <button class="action-button">
+            <!-- <i class="fas fa-expand-arrows-alt"></i> -->
+            <img src="https://img.icons8.com/?size=30&id=25965&format=png&color=ffffffff" alt="">
+        </button>
+    </div>
+</div>

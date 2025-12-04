@@ -1,0 +1,184 @@
+<app-navbar></app-navbar>
+<!-- <button class="btn btn-link text-decoration-none" (click)="goBack()">
+    <i class="bi bi-arrow-left">
+        <img src="https://img.icons8.com/?size=40&id=yiR4rPf7BGje&format=png&color=000000" alt="">
+    </i>
+  </button> -->
+
+    <!-- <div class="card" >
+        <div class="card-body">
+           <app-map></app-map>
+        </div>
+        <div class="card-footer">
+            <div class="location-card">
+                <img class="package-icon" src="https://img.icons8.com/?size=30&id=2436&format=png&color=8A6CDD" alt="">
+
+                <div class="location-info">
+                    <h4 class="location-title">Your location</h4>
+                    <p class="location-id">{{location}}</p>
+                </div>
+
+                <div class="menu-dots">
+                    <img src="https://img.icons8.com/?size=30&id=LKsFvL102V3q&format=png&color=BCBABF" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+<div class="action-grid">
+    <div class="action-item">
+        <div class="action-icon">
+            <img src="https://img.icons8.com/?size=100&id=HJuD8KBNRxsV&format=png&color=000000" alt="">
+        </div>
+        <p>Check rates</p>
+    </div>
+
+    <div class="action-item">
+        <div class="action-icon">
+            <img src="https://img.icons8.com/?size=100&id=8382&format=png&color=000000" alt="">
+        </div>
+        <p>Order</p>
+    </div>
+
+    <div class="action-item">
+        <div class="action-icon">
+            <img src="https://img.icons8.com/ios-filled/50/customer-support.png" alt="">
+        </div>
+        <p>Support</p>
+    </div>
+
+    <div class="action-item">
+        <div class="action-icon">
+            <img src="https://img.icons8.com/?size=100&id=40317&format=png&color=000000" alt="">
+        </div>
+        <p>History</p>
+    </div>
+</div> -->
+
+<!-- <div class="container mt-3">
+    <div class="card" style="width: 100wh;  height: 100vh;">
+        <div class="card-body">
+            <h5 class="card-title">Geofence & Settings</h5>
+            <hr>
+            <h6>Geofence: {{geoFence}}</h6>
+            <p>Fence Radius ({{ fenceRadius }} Meters)</p>
+            <div class="input-group mb-3">
+                <input type="number" id="fence-radius" [value]="fenceRadius" (input)="onRadiusChange($event)"
+                    min="20"
+                    class="form-control flex-grow p-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                    placeholder="e.g., 100" />
+
+                <button class="btn btn-outline-info" type="button" id="button-addon2" (click)="toggleGeo()">Set
+                    Geofence</button>
+            </div>
+            <p>Click 'Set Fence Center' then click on the map to define the center point.</p>
+
+            <button type="button" class="btn btn-outline-danger w-100" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Clear Geofence</button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Warning!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to remove the geofencing?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                (click)="clearGeo()">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6>Dog's Live Data</h6>
+            <ul>
+                <li> <span style="color: rgb(18, 128, 172);">Current Latitude: </span>{{latitude}}</li>
+                <li> <span style="color: rgb(18, 128, 172);">Current Longitude: </span>{{longitude}}</li>
+                <li> <span style="color: rgb(18, 128, 172);">Distance to Fence: </span>{{fenceRadius}} m</li>
+                <li> <span style="color: rgb(18, 128, 172);">Body Temperature: </span>{{bodyHeat}} &deg;C</li>
+                <li> <span style="color: rgb(18, 128, 172);">Heart Rate: </span>{{heartRate}} <span style="color: red;">bpm</span></li>
+            </ul>
+            <hr>
+            <button type="button" class="btn btn-outline-success w-100" (click)="trackPet()"
+                data-bs-target="#exampleModal">Track Pet</button>
+        </div>
+    </div>
+
+</div> -->
+    
+<div class="container mt-3">
+    <button class="btn btn-movie">
+        movie night
+    </button>
+    <div class="row mt-3" >
+        <div class="col">
+            <div class="card p-3 smart-card" (click)="goToPet()" style="cursor: pointer;">
+                <div class="d-flex justify-content-between align-items-center">
+            
+                    <!-- Left Icon -->
+                    <img 
+                        src="https://img.icons8.com/?size=50&id=117108&format=png&color=000000" 
+                        alt=""
+                    />
+            
+                    <!-- Right Icon -->
+                    <img 
+                        src="https://img.icons8.com/?size=25&id=98967&format=png&color=BEBDC1" 
+                        alt="" class="power-circle"
+                    />
+            
+                </div>
+                 <!-- Text Section -->
+                 <div>
+                    <h5 class="text-white fw-semibold mt-4">Bedroom light</h5>
+                    <p class="text-light m-0">{{petName}}</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col">
+            <div class="card p-3 shadow-sm rounded-4">
+
+                <div class="d-flex justify-content-between align-items-center">
+            
+                  <!-- Left: Title -->
+                  <h5 class="fw-semibold m-0">Device Icon</h5>
+            
+                  <!-- Right: Icons -->
+                  <div class="d-flex align-items-center gap-3">
+            
+                    <img 
+                      [src]="'https://img.icons8.com/?size=40&id=117108&format=png&color=' + img1Color"
+                      (click)="changeColor(1)"
+                      class="icon-btn"
+                      alt="icon1"
+                    />
+            
+                    <img 
+                      [src]="'https://img.icons8.com/?size=25&id=98967&format=png&color=' + img2Color"
+                      (click)="changeColor(2)"
+                      class="icon-btn"
+                      alt="icon2"
+                    />
+            
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            
+        </div>
+    </div>
+
+
+<app-bottom-nav></app-bottom-nav>

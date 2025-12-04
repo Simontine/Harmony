@@ -1,0 +1,88 @@
+.location-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Icon */
+.location-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+/* Text section */
+.location-info {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.location-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.location-id {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0 0;
+}
+
+/* Menu dots */
+.menu-dots {
+  font-size: 20px;
+  color: #444;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.menu-dots:hover {
+  color: #e11717;
+}
+
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  /* Pushes user-info and notification-button to opposite ends */
+  align-items: center;
+  margin-bottom: 25px;
+  /* Space between header and input bar */
+  // background-color: #000;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.geo {
+  font-size: 24px;
+  // color: #ccc;
+  margin: 0;
+  line-height: 1.2;
+  // font-family: poppins;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: #0d6efd !important;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #cfe2ff !important;
+}
+
+.disabled {
+  pointer-events: none; /* disable clicks */
+  opacity: 0.5;         /* greyed out */
+}

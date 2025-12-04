@@ -1,0 +1,63 @@
+<!-- 
+  <div class="bottom-nav">
+    <div class="nav-item active">
+      <img src="https://img.icons8.com/ios-glyphs/30/home.png" alt="Home">
+    </div>
+  
+    <div class="nav-item">
+      <img src="https://img.icons8.com/ios/30/bookmark-ribbon--v1.png" alt="Saved">
+    </div>
+  
+    <div class="nav-item">
+      <img src="https://img.icons8.com/ios/30/combo-chart--v1.png" alt="Analytics">
+    </div>
+  
+    <div class="nav-item">
+      <img src="https://img.icons8.com/?size=100&id=59996&format=png&color=000000" alt="Profile">
+    </div>
+  </div>
+  
+ -->
+
+<div class="bottom-nav">
+  @for (item of navItems; track item.target) {
+      <div 
+          class="nav-item"
+          [class.active]="item.isActive"
+          (click)="setActiveView(item.target)">
+        
+        <img src="https://img.icons8.com/ios-glyphs/30/{{ item.icon }}" alt="{{ item.alt }}">
+      </div>
+  }
+</div>
+
+<div class="bottom-nav">
+  @for (item of navItems; track item.target) {
+      <div 
+          class="nav-item"
+          [class.active]="item.isActive"
+          (click)="setActiveView(item.target)">
+        
+        <img src="https://img.icons8.com/ios-glyphs/30/{{ item.icon }}" alt="{{ item.alt }}">
+      </div>
+  }
+</div>
+
+
+<!-- 
+  <div class="bottom-nav">
+    <div 
+        *ngFor="let item of navItems"
+        class="nav-item"
+        [class.active]="item.isActive"
+        (click)="setActiveView(item.target)">
+      
+      <img src="https://img.icons8.com/ios-glyphs/30/{{ item.icon }}" alt="{{ item.alt }}">
+    </div>
+</div>
+
+<div *ngIf="activeView === 'home'" class="page">Welcome Home!</div>
+<div *ngIf="activeView === 'saved'" class="page">Your Saved Items</div>
+<div *ngIf="activeView === 'analytics'" class="page">Analytics Dashboard</div>
+<div *ngIf="activeView === 'profile'" class="page">User Profile Settings</div>
+ -->

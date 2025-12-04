@@ -1,0 +1,171 @@
+/* --- Global & Container Styles --- */
+.app-dashboard {
+    background-color: #000; /* Pure black background */
+    padding: 20px 20px 30px 20px; /* Padding for mobile screens */
+    color: white; /* Default text color */
+    max-width: auto; /* Constrain width for demonstration */
+}
+
+/* --- 1. Header Section Styles --- */
+.header-section {
+    display: flex;
+    justify-content: space-between; /* Pushes user-info and notification-button to opposite ends */
+    align-items: center;
+    margin-bottom: 25px; /* Space between header and input bar */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Profile Avatar Styles (Modified) --- */
+.profile-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Still makes the container circular */
+    overflow: hidden;   /* Crucial: clips the image to the circular shape */
+    margin-right: 15px;
+    /* Removed background-color: #ccc; as it's no longer needed for placeholder */
+}
+
+.profile-avatar img {
+    width: 100%;       /* Make image fill the avatar container */
+    height: 100%;      /* Make image fill the avatar container */
+    object-fit: cover; /* Ensures the image covers the area without distortion, cropping if necessary */
+    display: block;    /* Removes extra space below the image */
+}
+
+.welcome {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+    line-height: 1.2;
+    font-family: poppins;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Notification Button */
+/* --- Notification Button Styles (Modified) --- */
+.notification-button {
+    /* ... (Existing styles remain the same) ... */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #333; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    /* --- NEW/MODIFIED STYLE --- */
+    position: relative; /* Crucial for positioning the badge */
+}
+
+/* --- Notification Badge Style (NEW) --- */
+.notification-badge {
+    position: absolute;
+    top: -3px; /* Adjust vertical position */
+    right: -3px; /* Adjust horizontal position */
+    background-color: #ff4141; /* A typical red color for badges */
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 3px 5px; /* Adjust padding to fit the number */
+    border-radius: 50%; /* Make it a circular/pill shape */
+    min-width: 10px; /* Ensures a minimum size even for '1' */
+    text-align: center;
+    border: 1px solid #000; /* Optional: A small black border to pop on the dark background */
+}
+/* --- 2. Tracking Input Component Styles (Reusing previous CSS) --- */
+/* The styles for .tracking-input-container, .tracking-input, 
+   .icon-left, and .action-button are reused here. 
+   Ensure they are present in your stylesheet. */
+
+/* Base styles for the container */
+.tracking-input-container {
+    display: flex; /* Aligns contents horizontally */
+    align-items: center; /* Centers items vertically */
+    width: 100%;
+    max-width: auto; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 25px; /* Half the height for perfect pill shape */
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
+    overflow: hidden; /* Important to keep the elements inside the rounded border */
+    padding: 0 5px 0 15px; /* Space on the left for the icon */
+}
+
+/* Style for the main input field */
+.tracking-input {
+    flex-grow: 1; /* Makes the input take up most of the space */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 0 10px;
+    height: 100%;
+    background: transparent; /* Ensures white background comes from the container */
+}
+
+.tracking-input::placeholder {
+    color: #aaa; /* Lighter color for placeholder text */
+}
+
+/* Style for the left icon (Search) */
+.icon-left {
+    color: #aaa;
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+/* Style for the orange action button */
+.action-button {
+    border: none;
+    outline: none;
+    background-color: #ff8c42; /* The distinctive orange color */
+    color: white;
+    width: 40px; /* Size of the circular button */
+    height: 40px; /* Size of the circular button */
+    border-radius: 50%; /* Makes it a perfect circle */
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    margin-right: 3px; /* Small space from the container edge */
+    flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+.action-button:hover {
+    background-color: #e07c3a; /* Slightly darker orange on hover */
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.li{
+    font-size: 1.05rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+  .offcanvas
+  {
+    height: 50rem;
+    border-radius: 15px;
+    font-weight: 700;
+  }
