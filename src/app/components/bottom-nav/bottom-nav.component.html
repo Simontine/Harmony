@@ -19,27 +19,16 @@
   
  -->
 
-<div class="bottom-nav">
+ <div class="bottom-nav">
   @for (item of navItems; track item.target) {
       <div 
           class="nav-item"
-          [class.active]="item.isActive"
-          (click)="setActiveView(item.target)">
+          [class.active]="item.isActive" 
+          [routerLink]="item.target" 
+          (click)="navigateTo(item.target)">
         
         <img src="https://img.icons8.com/ios-glyphs/30/{{ item.icon }}" alt="{{ item.alt }}">
-      </div>
-  }
-</div>
-
-<div class="bottom-nav">
-  @for (item of navItems; track item.target) {
-      <div 
-          class="nav-item"
-          [class.active]="item.isActive"
-          (click)="setActiveView(item.target)">
-        
-        <img src="https://img.icons8.com/ios-glyphs/30/{{ item.icon }}" alt="{{ item.alt }}">
-      </div>
+        </div>
   }
 </div>
 

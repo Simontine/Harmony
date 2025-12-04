@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MapComponent } from './components/map/map.component';
 import { PetComponent } from './components/pet/pet.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { UserComponent } from './components/user/user.component';
 
 export const routes: Routes = [
   {
@@ -21,4 +22,7 @@ export const routes: Routes = [
   {
     path: 'pet', component: PetComponent,
   },
+  {
+    path: 'user', component: UserComponent
+  }
 ];
