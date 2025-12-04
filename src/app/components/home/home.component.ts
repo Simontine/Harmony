@@ -110,7 +110,7 @@ export class HomeComponent {
   }
 
   goToPet(){
-    this.router.navigate(['/setting']);
+    this.router.navigate(['/pet']);
   }
 
 }

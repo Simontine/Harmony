@@ -1,117 +1,66 @@
-// .bottom-nav {
-//     position: fixed;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     background: #ffffff;
-//     box-shadow: 0 -2px 10px rgba(11, 93, 174, 0.1);
-//     padding: 10px 0;
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//     z-index: 1000;
-//     height: 4rem;
-//   }
-  
-//   .nav-item img {
-//     width: 28px;
-//     height: 28px;
-//     opacity: 0.5; /* Default grey icons */
-//     transition: 0.2s;
-//   }
-  
-//   .nav-item.active img {
-//     opacity: 1;            /* Active icon is darker */
-//     filter: grayscale(0);  /* Full color/black */
-//   }
-  
-//   .nav-item img:hover {
-//     opacity: 0.8;
-//   }
-  
 
-/* Container Styles */
+
+/* Container Styles (No change needed here) */
 .bottom-nav {
-  /* Fix the bar to the bottom of the viewport */
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  
-  /* Use Flexbox to align items horizontally and space them evenly */
   display: flex;
-  justify-content: space-around; /* Distributes space between items */
-  align-items: center; /* Vertically centers the content */
-  
-  /* Styling for appearance */
-  background-color: #ffffff; /* White background */
-  border-top: 1px solid #e0e0e0; /* Subtle separator line */
-  height: 60px; /* Standard height for mobile navigation */
-  
-  /* Ensure it is above other content */
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  height: 60px; /* Adjust height to accommodate text */
   z-index: 1000;
-  
-  /* Optional: Smooth transition for hover/active states */
-  transition: background-color 0.3s ease;
 }
 
-/* Individual Item Styles */
+/* Individual Item Styles (Crucial Changes here) */
 .nav-item {
-  /* Center the image within the item */
+  /* Change to vertical flex direction */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; 
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   
-  /* Make the item clickable and give it padding/size */
-  flex-grow: 1; /* Allows items to fill the container space evenly */
-  padding: 10px 0;
+  flex-grow: 1;
+  padding: 5px 0; /* Reduced vertical padding */
   cursor: pointer;
   
-  /* Optional: Hover effect */
-  transition: background-color 0.2s, color 0.2s;
+  /* Ensure the item has space for the text */
+  text-align: center; 
 }
 
-/* Icon (Image) Styles */
+/* Icon (Image) Styles (Slightly smaller to make room for text) */
 .nav-item img {
-  /* Set a consistent size for all icons */
-  width: 24px;
-  height: 24px;
-  
-  /* Optional: Change the color of the icons (if they are mono-colored SVGs or using a filter) */
-  /* filter: invert(30%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(50%); */
+  width: 22px; 
+  height: 22px;
+  margin-bottom: 2px; /* Small space between icon and text */
 }
 
-/* Active State Styles */
+/* New: Text Label Styles */
+.nav-item .nav-label {
+  font-size: 10px; /* Standard small font for mobile labels */
+  font-weight: 500;
+  color: #707070; /* Default gray color */
+}
+
+/* New: Active State for Text */
+.nav-item.active .nav-label {
+  color: #007bff; /* Primary brand color for active text */
+}
+
+/* Active State Styles (Visual Indicator - remains the same or adjust) */
 .nav-item.active {
-  /* Visually distinguish the currently selected item */
   position: relative;
 }
 
-/* Optional: Adding a visual indicator for the active item */
 .nav-item.active::after {
   content: '';
   position: absolute;
   top: 0;
-  /* Example: A small blue line above the active icon */
   width: 30px; 
   height: 3px;
-  background-color: #007bff; /* Primary brand color (e.g., blue) */
+  background-color: #007bff; 
   border-radius: 0 0 3px 3px;
-}
-
-/* If you want the icon color to change for the active item */
-.nav-item.active img {
-  /* filter: none; /* If you applied a filter above, remove it here */
-  /* If the icon is colored, you may not need to do anything here */
-  color: #e51313;
-}
-
-/* Basic Page Display Rules */
-.page {
-  display: none; /* Hide all pages by default */
-  padding: 20px;
-}
-
-.active-page {
-  display: block; /* Show only the active page */
 }

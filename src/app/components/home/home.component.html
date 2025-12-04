@@ -5,7 +5,7 @@
     </i>
   </button> -->
 
-    <!-- <div class="card" >
+<!-- <div class="card" >
         <div class="card-body">
            <app-map></app-map>
         </div>
@@ -115,70 +115,57 @@
     </div>
 
 </div> -->
-    
+
 <div class="container mt-3">
     <button class="btn btn-movie">
         movie night
     </button>
-    <div class="row mt-3" >
+    <div class="row mt-3">
         <div class="col">
             <div class="card p-3 smart-card" (click)="goToPet()" style="cursor: pointer;">
                 <div class="d-flex justify-content-between align-items-center">
-            
+
                     <!-- Left Icon -->
-                    <img 
-                        src="https://img.icons8.com/?size=50&id=117108&format=png&color=000000" 
-                        alt=""
-                    />
-            
+                    <img src="https://img.icons8.com/?size=50&id=117108&format=png&color=000000" alt="" />
+
                     <!-- Right Icon -->
-                    <img 
-                        src="https://img.icons8.com/?size=25&id=98967&format=png&color=BEBDC1" 
-                        alt="" class="power-circle"
-                    />
-            
+                    <img src="https://img.icons8.com/?size=25&id=98967&format=png&color=BEBDC1" alt=""
+                        class="power-circle" />
+
                 </div>
-                 <!-- Text Section -->
-                 <div>
+                <!-- Text Section -->
+                <div>
                     <h5 class="text-white fw-semibold mt-4">Bedroom light</h5>
                     <p class="text-light m-0">{{petName}}</p>
                 </div>
             </div>
-            
+
         </div>
         <div class="col">
             <div class="card p-3 shadow-sm rounded-4">
 
                 <div class="d-flex justify-content-between align-items-center">
-            
-                  <!-- Left: Title -->
-                  <h5 class="fw-semibold m-0">Device Icon</h5>
-            
-                  <!-- Right: Icons -->
-                  <div class="d-flex align-items-center gap-3">
-            
-                    <img 
-                      [src]="'https://img.icons8.com/?size=40&id=117108&format=png&color=' + img1Color"
-                      (click)="changeColor(1)"
-                      class="icon-btn"
-                      alt="icon1"
-                    />
-            
-                    <img 
-                      [src]="'https://img.icons8.com/?size=25&id=98967&format=png&color=' + img2Color"
-                      (click)="changeColor(2)"
-                      class="icon-btn"
-                      alt="icon2"
-                    />
-            
-                  </div>
+
+                    <!-- Left: Title -->
+                    <h5 class="fw-semibold m-0">Device Icon</h5>
+
+                    <!-- Right: Icons -->
+                    <div class="d-flex align-items-center gap-3">
+
+                        <img [src]="'https://img.icons8.com/?size=40&id=117108&format=png&color=' + img1Color"
+                            (click)="changeColor(1)" class="icon-btn" alt="icon1" />
+
+                        <img [src]="'https://img.icons8.com/?size=25&id=98967&format=png&color=' + img2Color"
+                            (click)="changeColor(2)" class="icon-btn" alt="icon2" />
+
+                    </div>
                 </div>
-              </div>
-            
             </div>
-            
+
         </div>
+
     </div>
+</div>
 
 
 <app-bottom-nav></app-bottom-nav>

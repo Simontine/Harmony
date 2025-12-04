@@ -27,8 +27,10 @@
           [routerLink]="item.target" 
           (click)="navigateTo(item.target)">
         
-        <img src="https://img.icons8.com/ios-glyphs/30/{{ item.icon }}" alt="{{ item.alt }}">
-        </div>
+        <img [src]="item.icon" [alt]="item.alt">
+        
+        <span class="nav-label">{{ item.alt }}</span> 
+      </div>
   }
 </div>
 
