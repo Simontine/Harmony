@@ -15,5 +15,8 @@ export class AddDeviceComponent {
   qrCode(){
     window.location.href = '/qr';
   }
+  searchDevice(){
+    window.location.href = '/search';
+  }
 
 }
