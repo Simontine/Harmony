@@ -5,8 +5,8 @@
     <a class="nav-link justify-content-end" aria-disabled="true">Disabled</a>
   </nav> -->
 
-<nav class="navbar" style="background-color: rgb(0, 0, 0); height: 7rem; margin-top: 0%; margin-bottom: 2rem;">
-    <div class="container mt-3">
+<nav class="navbar" style="background-color: rgb(0, 0, 0); height: 4rem; margin-top: 0%; margin-bottom: 2rem;">
+    <div class="container">
         <a class="navbar-brand" (click)="goBack()">
             <img src="https://img.icons8.com/?size=40&id=yiR4rPf7BGje&format=png&color=ffffff" width="30" height="24">
         </a>
@@ -85,9 +85,9 @@
                         <div style="display: flex; align-items: center; gap: 0;">
 
 
-                            <button class="btn" style="padding-right: 1rem;" type="button" (click)="changeState()">
-                                <img [src]="'https://img.icons8.com/?size=40&id=Cqhok5BBe9du&format=png&color=' + color"
-                                    alt="">
+                            <button class="btn" style="padding-right: 1rem;" type="button" (click)="changeState()" >
+                                <img [src]="'https://img.icons8.com/?size=40&id=i13OnzzdMZrV&format=png&color=' + img1Color"
+                                 (click)="changeColor(1)" class="icon-btn" alt="icon1" />
                             </button>
 
                         </div>

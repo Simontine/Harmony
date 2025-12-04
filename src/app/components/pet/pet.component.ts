@@ -23,7 +23,20 @@ export class PetComponent {
   value = 50;
   petName: string = "Buddy";
 
+  img1Color = '28a745';
+  img2Color = '00AAFF';
+
   constructor(private router: Router) { }
+
+  changeColor(img: number) {
+    if (img === 1) {
+      this.img1Color = this.img1Color === '28a745' ? 'FF0000' : '28a745';
+    }
+    if (img === 2) {
+      this.img2Color = this.img2Color === 'BEBEC1' ? '00AAFF' : 'BEBEC1';
+    }
+  }
+
   
   goBack() {
     window.history.back();
@@ -31,10 +44,10 @@ export class PetComponent {
 
   // color = "#000000"; // default
 
-  changeColor() {
-    const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffa500", "#800080"];
-    this.color = colors[Math.floor(Math.random() * colors.length)];
-  }
+  // changeColor() {
+  //   const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffa500", "#800080"];
+  //   this.color = colors[Math.floor(Math.random() * colors.length)];
+  // }
 
   changeState() {
     this.state = !this.state;
