@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BottomNavComponent } from "../bottom-nav/bottom-nav.component";
 import { NavbarComponent } from "../navbar/navbar.component";
 import { Router } from '@angular/router';

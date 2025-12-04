@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MapComponent } from "../map/map.component";
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,11 +11,17 @@ import { Router } from '@angular/router';
   styleUrl: './pet.component.scss'
 })
 export class PetComponent {
+  // Input property to make the component reusable with different numbers
+@Input() displayPhoneNumber: string = '(071) 549-6360';
+  
+// The actual number used in the href (best practice: include country code and no formatting)
+@Input() phoneNumber: string = '+27715496360';
 
   color: string = '00ff00';
   state: boolean = true;
   geo: string = "Enabled";
   value = 50;
+  petName: string = "Buddy";
 
   constructor(private router: Router) { }
   

@@ -86,3 +86,70 @@ input[type="range"]::-webkit-slider-runnable-track {
   pointer-events: none; /* disable clicks */
   opacity: 0.5;         /* greyed out */
 }
+
+
+/*The styling for a call card*/
+
+$primary-color: #007bff; // A common blue for links
+$success-color: #28a745; // Green is often used for calls
+
+.call-card {
+    // Styling the container for a card appearance
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.call-link {
+    // Resetting link styles and making it a flex container
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    transition: background-color 0.2s;
+
+    &:hover, &:focus {
+        background-color: #f8f9fa;
+    }
+}
+
+.call-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    // background-color: $success-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+
+    img {
+        // Style your phone icon here
+        width: 50px;
+        height: 50px;
+        // filter: invert(100%); /* If using a black icon, turns it white */
+    }
+}
+
+.call-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.call-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.call-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: $success-color;
+}
+
+/*The styling for a call card*/

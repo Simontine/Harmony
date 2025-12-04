@@ -98,46 +98,21 @@
                 </div>
             </div>
         </div>
+    </div>
         <div class="col">
-            <div class="card" style="height: 17rem;">
+            <div  style="height: 17rem;">
                 <div class="card-body">
-
-                    <div class="d-flex align-items-center mb-3">
-                      <img src="https://img.icons8.com/?size=30&id=LKsFvL102V3q&format=png&color=BCBABF" alt="Contact Photo" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
-                      <div>
-                        <h5 class="card-title mb-0">**Dr. Evelyn Reed**</h5>
-                        <h6 class="card-subtitle text-muted">Recent Incoming Call</h6>
-                      </div>
+                    <div class="call-card">
+                        <a [href]="'tel:' + phoneNumber" class="call-link">
+                            <div class="call-icon">
+                                <img src="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000" alt="Phone Icon">
+                            </div>
+                            <div class="call-details">
+                                <span class="call-label">Call {{petName}} Now</span>
+                                <span class="call-number">{{ displayPhoneNumber }}</span>
+                            </div>
+                        </a>
                     </div>
-                    
-                    <ul class="list-group list-group-flush mb-3">
-                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                        <small class="text-muted">Phone Number:</small>
-                        <span>**(555) 123-4567**</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                        <small class="text-muted">Call Time:</small>
-                        <span><i class="bi bi-clock me-1"></i> 02:45 PM</span>
-                      </li>
-                      <!-- <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                        <small class="text-muted">Call Duration:</small>
-                        <span>**1:32**</span>
-                      </li> -->
-                    </ul>
-                
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                      <button class="btn btn-outline-primary btn-sm" type="button">
-                        <i class="bi bi-person-lines-fill me-1"></i> View Profile
-                      </button>
-                      <button class="btn btn-success btn-sm" type="button">
-                        <i class="bi bi-telephone-fill me-1"></i> Call Back
-                      </button>
-                    </div>
-                
-                  </div>
-                  <!-- <div class="card-footer text-muted text-end">
-                    Logged on: 2025-12-03
-                  </div> -->
             </div>
         </div>
     </div>
