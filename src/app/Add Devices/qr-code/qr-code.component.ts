@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class QRCodeComponent {
 
+
+  goBack() {
+    window.history.back();
+  }
+
 }

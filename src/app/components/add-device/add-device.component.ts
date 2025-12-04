@@ -12,4 +12,8 @@ export class AddDeviceComponent {
     window.history.back();
   }
 
+  qrCode(){
+    window.location.href = '/qr';
+  }
+
 }
