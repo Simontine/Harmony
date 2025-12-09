@@ -6,8 +6,8 @@ import { PetComponent } from './components/pet/pet.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { UserComponent } from './components/user/user.component';
 import { AddDeviceComponent } from './components/add-device/add-device.component';
-import { QRCodeComponent } from './Add Devices/qr-code/qr-code.component';
-import { SearchComponent } from './Add Devices/search/search.component';
+import { QRCodeComponent } from './Pages/qr-code/qr-code.component';
+import { SearchComponent } from './Pages/search/search.component';
 
 export const routes: Routes = [
   {
