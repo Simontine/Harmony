@@ -55,14 +55,6 @@ export class HomeComponent {
     this.geo = false;
     this.geoFence = "Not Active";
     this.rescrict = false;
-
-    // try {
-    //   const autoRef = ref(this.db, "sensorData/auto");
-    //   await set(autoRef, this.rescrict); // Write 'ON' or 'OFF'
-    //   console.log(`Automation state set to: ${this.rescrict}`);
-    // } catch (error) {
-    //   console.error("Error updating automation state in Firebase:", error);
-    // }
   }
 
   async toggleGeo() {
@@ -74,13 +66,6 @@ export class HomeComponent {
       console.log("Geofencing activated with radius:", this.fenceRadius);
     }
 
-    // try {
-    //   const autoRef = ref(this.db, "sensorData/auto");
-    //   await set(autoRef, this.rescrict); // Write 'ON' or 'OFF'
-    //   console.log(`Automation state set to: ${this.rescrict}`);
-    // } catch (error) {
-    //   console.error("Error updating automation state in Firebase:", error);
-    // }
   }
 
   goBack() {
@@ -90,21 +75,15 @@ export class HomeComponent {
   
 
   async trackPet() {
-    // Check if we have valid coordinates before trying to open the map
     if (this.latitudeStr !== null && this.longitudeStr !== null) {
       
-      // 1. Define the Google Maps search URL structure
-      // The `q=` parameter is used for a direct search query,
-      // which is often a specific coordinate pair.
       const mapUrl = `https://www.google.com/maps/search/?api=1&query=${this.latitudeStr},${this.longitudeStr}`;
       
-      // 2. Open the URL in a new browser tab/window
       window.open(mapUrl, '_blank');
       
       console.log('Opening external map for coordinates:', this.latitudeStr, this.longitudeStr);
     } else {
       console.warn('Cannot track pet: Latitude or Longitude is not yet available.');
-      // Optionally, show a notification to the user
       alert('Location data is not yet available. Please wait a moment.');
     }
   }
